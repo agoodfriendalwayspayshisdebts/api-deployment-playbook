@@ -15,7 +15,7 @@
       repo: https://github.com/agoodfriendalwayspayshisdebts/agoodfriendalwayspayshisdebts-api.git
 
     roles:
-      # - init
+      - init
       - supervisor
       - stop_app
       - deploy
