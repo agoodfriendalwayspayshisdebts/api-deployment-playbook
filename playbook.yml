@@ -1,0 +1,30 @@
+---
+  - name: Enable maintenance mode
+    hosts: all
+    remote_user: deploy
+
+    roles:
+      - enable_maintenance
+
+
+  - name: Deploy API
+    hosts: api
+    remote_user: deploy
+    vars:
+      app: debts-api
+      repo: https://github.com/agoodfriendalwayspayshisdebts/agoodfriendalwayspayshisdebts-api.git
+
+    roles:
+      # - init
+      - supervisor
+      - stop_app
+      - deploy
+      - restart_app
+
+  - name: Disable maintenance mode
+    hosts: all
+    remote_user: deploy
+
+    roles:
+      - disable_maintenance
+...

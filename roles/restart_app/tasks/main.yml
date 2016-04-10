@@ -1,0 +1,7 @@
+---
+  - name: Restart app
+    become: yes
+    supervisorctl:
+      name={{app}}
+      state=restarted
+...

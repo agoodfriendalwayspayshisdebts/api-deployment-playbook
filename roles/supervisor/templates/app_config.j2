@@ -1,0 +1,5 @@
+[program:{{app}}]
+user={{user}}
+directory=/home/{{user}}/{{app}}
+environment={{app_environment | mandatory | replace('\n', ',')}}
+command=bash bin/server_run.sh

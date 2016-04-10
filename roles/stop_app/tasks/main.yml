@@ -1,0 +1,13 @@
+---
+  - name: Create app if necessary
+    become: yes
+    supervisorctl:
+      name={{app}}
+      state=present
+
+  - name: Stop app
+    become: yes
+    supervisorctl:
+      name={{app}}
+      state=stopped
+...
