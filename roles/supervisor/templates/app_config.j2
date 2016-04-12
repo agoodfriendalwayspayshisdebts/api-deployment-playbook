@@ -1,8 +1,6 @@
 [program:{{app}}]
 user={{user}}
 directory=/home/{{user}}/{{app}}
-autostart=true
-autorestart=unexpected
 stdout_logfile=/home/{{user}}/{{app}}/out.log
 stderr_logfile=/home/{{user}}/{{app}}/error.log
 environment={{app_environment | mandatory | replace('\n', ',')}}
