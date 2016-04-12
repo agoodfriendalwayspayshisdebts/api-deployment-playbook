@@ -7,6 +7,6 @@ fi
 
 ansible-playbook -K \
   -i hosts \
-  -e @private_vars/env.yml \
+  -e @private_vars/api_env.yml \
   -e version=$1 \
   playbook.yml
