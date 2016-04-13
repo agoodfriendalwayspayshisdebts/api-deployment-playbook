@@ -29,14 +29,4 @@
       depth=1
       version={{version}}
       dest=/home/{{user}}/{{app}}
-
-  - name: Create stdout log file
-    file:
-      path=/home/{{user}}/{{app}}/out.log
-      state=touch
-
-  - name: Create error log file
-    file:
-      path=/home/{{user}}/{{app}}/error.log
-      state=touch
 ...

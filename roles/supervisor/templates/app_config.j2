@@ -1,7 +1,7 @@
 [program:{{app}}]
 user={{user}}
 directory=/home/{{user}}/{{app}}
-stdout_logfile=/home/{{user}}/{{app}}/out.log
-stderr_logfile=/home/{{user}}/{{app}}/error.log
+stdout_logfile=/home/{{user}}/out.log
+stderr_logfile=/home/{{user}}/error.log
 environment={{app_environment | mandatory | replace('\n', ',')}}
 command=bash bin/server_run.sh
